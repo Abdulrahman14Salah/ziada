@@ -203,10 +203,18 @@ add_filter('astra_primary_menu_disable', function ($disable) {
 /*
 ** Add a hidden field to Contact Form 7 forms
  */
-add_filter('wpcf7_validate', function ($result) {
+add_filter('wpcf7_validate', function ($result, $tags) {
 
+    // 1. Honeypot
     if (!empty($_POST['website-url'] ?? '')) {
-        $result->invalidate('', '');
+        $result->invalidate('website-url', 'Spam detected.');
+        return $result;
+    }
+
+    // 2. تحقق من السرعة — لو الفورم اتبعت في أقل من 3 ثواني → bot
+    $form_load_time = isset($_POST['form_load_time']) ? (int)$_POST['form_load_time'] : 0;
+    if ($form_load_time && (time() - $form_load_time) < 3) {
+        $result->invalidate('', 'Please try again.');
     }
 
     return $result;
