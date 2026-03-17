@@ -190,6 +190,37 @@ get_header(); ?>
                 </div>
             </div>
         </section>
+
+        <section class="section-padding bg-background">
+            <div class="ast-container">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Our Office <span class="text-primary">Environment</span></h2>
+                    <p class="text-muted-foreground text-lg">Take a look inside our workspace where we help businesses grow.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="group relative rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300"><img src="<?php echo get_stylesheet_directory_uri(); ?>/frontend/assets/ziada-office-1.jpg" alt="Ziada Office 1" class="w-full h-64 md:h-72 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300"><img src="<?php echo get_stylesheet_directory_uri(); ?>/frontend/assets/ziada-office-2.jpg" alt="Ziada Office 2" class="w-full h-64 md:h-72 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300"><img src="<?php echo get_stylesheet_directory_uri(); ?>/frontend/assets/ziada-office-3.jpg" alt="Ziada Office 3" class="w-full h-64 md:h-72 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300"><img src="<?php echo get_stylesheet_directory_uri(); ?>/frontend/assets/ziada-office-4.jpg" alt="Ziada Office 4" class="w-full h-64 md:h-72 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300"><img src="<?php echo get_stylesheet_directory_uri(); ?>/frontend/assets/ziada-office-5.jpg" alt="Ziada Office 5" class="w-full h-64 md:h-72 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300"><img src="<?php echo get_stylesheet_directory_uri(); ?>/frontend/assets/ziada-office-6.jpg" alt="Ziada Office 6" class="w-full h-64 md:h-72 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <section class="section-padding bg-gradient-to-br from-primary/10 via-background to-accent/5">
             <div class="ast-container">
                 <div class="max-w-3xl mx-auto text-center">
