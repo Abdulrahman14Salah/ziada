@@ -1,0 +1,50 @@
+name: Build Theme ZIP
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get version from tag
+        run: echo "VERSION=${GITHUB_REF_NAME#v}" >> $GITHUB_ENV
+
+      - name: Update style.css version
+        run: |
+          awk -v v="$VERSION" '
+          BEGIN{found=0}
+          /^Version:/ {$0="Version: " v; found=1}
+          {print}
+          END{if(!found) print "Version: " v}
+          ' style.css > tmp
+          mv tmp style.css
+
+      - name: Create theme folder
+        run: |
+          mkdir ziada
+          rsync -av ./ ziada/ \
+          --exclude=".git" \
+          --exclude=".github" \
+          --exclude="node_modules" \
+          --exclude="ziada"
+
+      - name: Create zip package
+        run: |
+          zip -r ziada.zip ziada
+
+      - name: Upload ZIP to Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}
+          files: ziada.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

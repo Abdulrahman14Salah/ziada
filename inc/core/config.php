@@ -1,0 +1,46 @@
+<?php
+
+if (! defined('ABSPATH')) {
+    exit;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Theme Configuration
+|--------------------------------------------------------------------------
+*/
+
+define('MYTHEME_NAME', 'Ziada');
+
+define('MYTHEME_SLUG', wp_get_theme()->get_stylesheet());
+
+
+/*
+|--------------------------------------------------------------------------
+| GitHub Repository
+|--------------------------------------------------------------------------
+*/
+
+define('MYTHEME_GITHUB_USER', 'Abdulrahman14Salah');
+
+define('MYTHEME_GITHUB_REPO', 'ziada');
+
+define('MYTHEME_GITHUB_TOKEN', getenv('MYTHEME_GITHUB_TOKEN') ?: '');
+
+
+/*
+|--------------------------------------------------------------------------
+| Update API
+|--------------------------------------------------------------------------
+*/
+
+define('MYTHEME_UPDATE_API', 'https://api.github.com/repos/' . MYTHEME_GITHUB_USER . '/' . MYTHEME_GITHUB_REPO . '/releases/latest');
+
+
+/*
+|--------------------------------------------------------------------------
+| Theme Website (future license server)
+|--------------------------------------------------------------------------
+*/
+
+define('MYTHEME_THEME_SITE', 'https://ziadadc.com/');
