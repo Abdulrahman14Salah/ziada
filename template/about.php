@@ -45,7 +45,7 @@ get_header(); ?>
                     </div>
                     <div>
                         <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">Who <span class="text-primary">We Are</span></h2>
-                        <p class="text-muted-foreground text-lg leading-relaxed mb-6">Ziada company specializes in establishing companies in the UAE, and opening other branches for the companies it owns in other countries. We have a team with great experience in establishing companies in the Emirates.</p>
+                        <p class="text-muted-foreground text-lg leading-relaxed mb-6">Ziada Company specializes in establishing companies in the UAE, and opening other branches for the companies it owns in other countries. We have a team with great experience in establishing companies in the Emirates.</p>
                         <p class="text-muted-foreground text-lg leading-relaxed mb-8">Ziada Company will always be by your side to develop and grow your business significantly and invest with others easily and simply. Our mission is to simplify the complex processes of business formation and citizenship acquisition, making your global ambitions achievable.</p>
                         <div class="grid sm:grid-cols-2 gap-4">
                             <div class="flex items-center gap-3">

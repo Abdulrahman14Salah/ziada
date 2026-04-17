@@ -12,7 +12,7 @@
             </div>
             <div class="animate-slide-in-right">
                 <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">Who Are <span class="text-primary">We</span></h2>
-                <p class="text-muted-foreground text-lg leading-relaxed mb-8">Ziada company specializes in establishing companies in the UAE, and opening other branches for the companies it owns in other countries. We have a team with great experience in establishing companies in the Emirates. Ziada Company will always be by your side to develop and grow your business significantly and invest with others easily and simply.</p>
+                <p class="text-muted-foreground text-lg leading-relaxed mb-8">Ziada Company specializes in establishing companies in the UAE, and opening other branches for the companies it owns in other countries. We have a team with great experience in establishing companies in the Emirates. Ziada Company will always be by your side to develop and grow your business significantly and invest with others easily and simply.</p>
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
                         <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-primary">
