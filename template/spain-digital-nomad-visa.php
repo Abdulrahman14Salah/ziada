@@ -351,10 +351,10 @@ get_header('spain'); ?>
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Our <span class="text-primary">Packages</span></h2>
                 </div>
-                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
                     <div class="relative bg-card border rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 border-solid hover:shadow-elevated border-border">
                         <h3 class="font-display text-xl font-bold text-foreground mb-2">Essential</h3>
-                        <p class="text-3xl font-bold text-primary mb-6">€6,000</p>
+                        <p class="text-3xl font-bold text-primary mb-6">€7,500</p>
                         <ul class="space-y-3 mb-8">
                             <li class="flex items-center gap-2 text-muted-foreground text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-primary flex-shrink-0">
                                     <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
@@ -378,41 +378,10 @@ get_header('spain'); ?>
                                 </svg>Email updates</li>
                         </ul><a href="#lead-form" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:shadow-lg h-10 px-4 py-2 w-full bg-secondary text-secondary-foreground hover:text-secondary-foreground hover:bg-secondary/80">Get Started</a>
                     </div>
-                    <div class="relative bg-card border rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 border-solid hover:shadow-elevated border-primary shadow-card scale-[1.02]">
-                        <div class="absolute -top-3 left-1/2 -translate-x-1/2"><span class="bg-primary text-primary-foreground text-xs font-bold px-4 py-1 rounded-full">Most Popular</span></div>
-                        <h3 class="font-display text-xl font-bold text-foreground mb-2">Professional</h3>
-                        <p class="text-3xl font-bold text-primary mb-6">€10,000</p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-2 text-muted-foreground text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-primary flex-shrink-0">
-                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                    <path d="m9 11 3 3L22 4"></path>
-                                </svg>Everything in Essential</li>
-                            <li class="flex items-center gap-2 text-muted-foreground text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-primary flex-shrink-0">
-                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                    <path d="m9 11 3 3L22 4"></path>
-                                </svg>Spanish lawyer review</li>
-                            <li class="flex items-center gap-2 text-muted-foreground text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-primary flex-shrink-0">
-                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                    <path d="m9 11 3 3L22 4"></path>
-                                </svg>Priority processing</li>
-                            <li class="flex items-center gap-2 text-muted-foreground text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-primary flex-shrink-0">
-                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                    <path d="m9 11 3 3L22 4"></path>
-                                </svg>Family inclusion support</li>
-                            <li class="flex items-center gap-2 text-muted-foreground text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-primary flex-shrink-0">
-                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                    <path d="m9 11 3 3L22 4"></path>
-                                </svg>Weekly progress calls</li>
-                            <li class="flex items-center gap-2 text-muted-foreground text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-primary flex-shrink-0">
-                                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                    <path d="m9 11 3 3L22 4"></path>
-                                </svg>Post-approval guidance</li>
-                        </ul><a href="#lead-form" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:shadow-lg h-10 px-4 py-2 w-full bg-primary hover:bg-primary/90 text-primary-foreground hover:text-primary-foreground">Get Started</a>
-                    </div>
                     <div class="relative bg-card border rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 border-solid hover:shadow-elevated border-border">
                         <div class="absolute -top-3 left-1/2 -translate-x-1/2"><span class="bg-primary text-primary-foreground text-xs font-bold px-4 py-1 rounded-full">All-Inclusive</span></div>
                         <h3 class="font-display text-xl font-bold text-foreground mb-2">VIP</h3>
-                        <p class="text-3xl font-bold text-primary mb-6">€15,000</p>
+                        <p class="text-3xl font-bold text-primary mb-6">€14,900</p>
                         <ul class="space-y-3 mb-8">
                             <li class="flex items-center gap-2 text-muted-foreground text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-primary flex-shrink-0">
                                     <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
