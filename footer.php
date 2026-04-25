@@ -26,7 +26,7 @@ if (! defined('ABSPATH')) {
 		<div class="ast-container py-16">
 			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
 				<div>
-					<h3 class="font-display text-2xl font-bold mb-6 text-primary-foreground">ZIADA</h3>
+					<h3 class="font-display text-2xl font-bold mb-6 text-primary-foreground">Ziada Company</h3>
 					<p class="text-white/80 leading-relaxed text-sm mb-0">Ziada Company specializes in establishing businesses in the UAE and setting up additional branches for companies operating in other countries. Our team brings extensive expertise in company formation across the Emirates, ensuring a smooth and efficient setup process.</p>
 				</div>
 				<div>

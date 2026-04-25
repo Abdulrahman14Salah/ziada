@@ -2,7 +2,7 @@
     <div class="ast-container">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Our Clients <span class="text-primary">Feedback</span></h2>
-            <p class="text-muted-foreground text-lg">Our clients talking about their experience with ZIADA, the speed of completing procedures.</p>
+            <p class="text-muted-foreground text-lg">Hear what our clients are saying about their experience with Ziada Company and our efficient process.</p>
         </div>
 
         <?php

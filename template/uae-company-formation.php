@@ -488,7 +488,7 @@ get_header('uae'); ?>
         <section id="why-ziada" class="section-padding bg-card">
             <div class="ast-container">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Why Buy Through <span class="text-primary">ZIADA?</span></h2>
+                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Why Buy Through <span class="text-primary">Ziada Company?</span></h2>
                 </div>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
                     <div class="flex items-start gap-4 bg-background border border-solid border-border rounded-2xl p-6 hover:shadow-card transition-all duration-300 hover:-translate-y-1">
