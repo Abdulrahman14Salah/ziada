@@ -214,7 +214,7 @@ get_header('spain'); ?>
         <section class="section-padding bg-background">
             <div class="ast-container">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Why Clients Choose <span class="text-primary">ZIADA</span></h2>
+                    <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Why Clients Choose <span class="text-primary">Ziada Company</span></h2>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
                     <div class="flex items-center gap-4 bg-card border border-solid border-border rounded-xl p-5 hover:shadow-card transition-all">
@@ -547,7 +547,7 @@ get_header('spain'); ?>
                                 </svg></div>
                             <h2 class="font-display text-2xl font-bold text-foreground">Spain Digital Nomad Visa</h2>
                         </div>
-                        <p class="text-muted-foreground leading-relaxed">Spain's Digital Nomad Visa offers legal residency in Spain without any property or financial investment — purely based on income from remote work. Applicants need a minimum income of €2,760/month, can include family members, and gain Schengen-wide travel access. Under the Beckham Law, eligible applicants may benefit from a flat 24% tax rate for up to 6 years. ZIADA, a UAE government-licensed immigration consultancy, manages the entire process with Spanish immigration lawyers reviewing every case. With a 95%+ approval rate, transparent pricing, and a refund guarantee, ZIADA offers Essential, Professional, and VIP packages starting from €6,000.</p>
+                        <p class="text-muted-foreground leading-relaxed">Spain's Digital Nomad Visa offers legal residency in Spain without any property or financial investment — purely based on income from remote work. Applicants need a minimum income of €2,760/month, can include family members, and gain Schengen-wide travel access. Under the Beckham Law, eligible applicants may benefit from a flat 24% tax rate for up to 6 years. Ziada Company, a UAE government-licensed immigration consultancy, manages the entire process with Spanish immigration lawyers reviewing every case. With a 95%+ approval rate, transparent pricing, and a refund guarantee, Ziada Company offers Essential, Professional, and VIP packages starting from €6,000.</p>
                     </div>
                 </div>
             </div>

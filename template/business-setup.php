@@ -46,8 +46,8 @@ get_header(); ?>
                                 <line x1="12" x2="12" y1="2" y2="22"></line>
                                 <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                             </svg></div>
-                        <h3 class="font-display text-xl font-bold text-foreground mb-3">0% Corporate Tax</h3>
-                        <p class="text-muted-foreground mb-0">Enjoy tax-free income for many business activities in UAE free zones with no personal income tax.</p>
+                        <h3 class="font-display text-xl font-bold text-foreground mb-3">UAE Corporate Tax Benefits</h3>
+                        <p class="text-muted-foreground mb-0">Benefit from no personal income tax and UAE free zone incentives. Corporate tax is generally 0% on taxable income up to AED 375,000 and 9% on taxable income above that threshold, subject to applicable rules.</p>
                     </div>
                     <div class="group p-8 bg-background border border-solid border-border/50 rounded-2xl hover:shadow-card transition-all duration-300" style="animation-delay: 0.1s;">
                         <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors">

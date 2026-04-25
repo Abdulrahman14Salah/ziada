@@ -45,8 +45,8 @@ get_header(); ?>
                     </div>
                     <div>
                         <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">Who <span class="text-primary">We Are</span></h2>
-                        <p class="text-muted-foreground text-lg leading-relaxed mb-6">Ziada Company specializes in establishing companies in the UAE, and opening other branches for the companies it owns in other countries. We have a team with great experience in establishing companies in the Emirates.</p>
-                        <p class="text-muted-foreground text-lg leading-relaxed mb-8">Ziada Company will always be by your side to develop and grow your business significantly and invest with others easily and simply. Our mission is to simplify the complex processes of business formation and citizenship acquisition, making your global ambitions achievable.</p>
+                        <p class="text-muted-foreground text-lg leading-relaxed mb-6">Ziada Company specializes in UAE company formation and branch setup for businesses expanding from other markets. Our experienced team guides clients through licensing, documentation, and compliance requirements across the Emirates.</p>
+                        <p class="text-muted-foreground text-lg leading-relaxed mb-8">Ziada Company supports founders and investors as they launch, scale, and manage their UAE operations. Our mission is to simplify the complex processes of business formation and citizenship acquisition, making your global ambitions achievable.</p>
                         <div class="grid sm:grid-cols-2 gap-4">
                             <div class="flex items-center gap-3">
                                 <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-primary">
