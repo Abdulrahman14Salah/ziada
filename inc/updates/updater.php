@@ -46,6 +46,16 @@ class MyTheme_GitHub_Updater
             10,
             2
         );
+
+        add_action(
+            'admin_menu',
+            [$this, 'register_update_page']
+        );
+
+        add_action(
+            'admin_post_ziada_check_theme_update',
+            [$this, 'force_check_update']
+        );
     }
 
     public function check_update($transient)
@@ -128,7 +138,7 @@ class MyTheme_GitHub_Updater
     public function add_github_auth_headers($args, $url)
     {
 
-        if (!is_string($url) || strpos($url, 'api.github.com/') === false) {
+        if (!$this->is_github_update_url($url)) {
             return $args;
         }
 
@@ -162,6 +172,109 @@ class MyTheme_GitHub_Updater
         }
 
         delete_transient(self::RELEASE_TRANSIENT_KEY . $this->theme_slug);
+    }
+
+    public function register_update_page()
+    {
+        add_theme_page(
+            __('Ziada Updates', 'arqamweb'),
+            __('Ziada Updates', 'arqamweb'),
+            'update_themes',
+            'ziada-updates',
+            [$this, 'render_update_page']
+        );
+    }
+
+    public function render_update_page()
+    {
+        if (!current_user_can('update_themes')) {
+            wp_die(
+                esc_html__('You are not allowed to check theme updates.', 'arqamweb'),
+                esc_html__('Permission denied', 'arqamweb'),
+                ['response' => 403]
+            );
+        }
+
+        $release = $this->get_latest_release();
+        $latest_version = $release && !empty($release->tag_name)
+            ? ltrim((string) $release->tag_name, 'v')
+            : '';
+        $current_version = $this->theme_data->get('Version');
+        $package = $release ? $this->resolve_package_url($release) : '';
+        $has_update = $latest_version !== '' && version_compare($current_version, $latest_version, '<');
+        $checked = isset($_GET['ziada_update_checked'])
+            ? sanitize_text_field(wp_unslash($_GET['ziada_update_checked']))
+            : '';
+
+        echo '<div class="wrap">';
+        echo '<h1>' . esc_html__('Ziada GitHub Updates', 'arqamweb') . '</h1>';
+
+        if ($checked === '1') {
+            echo '<div class="notice notice-success is-dismissible"><p>';
+            echo esc_html__('Update cache was cleared and WordPress checked GitHub releases again.', 'arqamweb');
+            echo '</p></div>';
+        }
+
+        echo '<p>' . esc_html__('Use this page after publishing a new GitHub Release. It clears WordPress update cache and asks GitHub for the latest Ziada release.', 'arqamweb') . '</p>';
+
+        echo '<table class="widefat striped" style="max-width: 760px;">';
+        echo '<tbody>';
+        echo '<tr><th scope="row">' . esc_html__('Current theme version', 'arqamweb') . '</th><td>' . esc_html($current_version) . '</td></tr>';
+        echo '<tr><th scope="row">' . esc_html__('Latest GitHub release', 'arqamweb') . '</th><td>' . esc_html($latest_version ?: __('Not found', 'arqamweb')) . '</td></tr>';
+        echo '<tr><th scope="row">' . esc_html__('Package URL', 'arqamweb') . '</th><td>' . esc_html($package ?: __('Not found', 'arqamweb')) . '</td></tr>';
+        echo '<tr><th scope="row">' . esc_html__('Update status', 'arqamweb') . '</th><td>';
+
+        if (!$release) {
+            echo esc_html__('Could not read the latest GitHub release.', 'arqamweb');
+        } elseif (!$package) {
+            echo esc_html__('Release found, but no zip package was found.', 'arqamweb');
+        } elseif ($has_update) {
+            echo esc_html__('An update should appear in WordPress updates.', 'arqamweb');
+        } else {
+            echo esc_html__('No newer release than the installed theme version.', 'arqamweb');
+        }
+
+        echo '</td></tr>';
+        echo '</tbody>';
+        echo '</table>';
+
+        echo '<p>';
+        echo '<a class="button button-primary" href="' . esc_url($this->get_force_check_url()) . '">';
+        echo esc_html__('Check GitHub Release Now', 'arqamweb');
+        echo '</a> ';
+        echo '<a class="button" href="' . esc_url(admin_url('update-core.php')) . '">';
+        echo esc_html__('Open WordPress Updates', 'arqamweb');
+        echo '</a>';
+        echo '</p>';
+        echo '</div>';
+    }
+
+    public function force_check_update()
+    {
+        if (!current_user_can('update_themes')) {
+            wp_die(
+                esc_html__('You are not allowed to check theme updates.', 'arqamweb'),
+                esc_html__('Permission denied', 'arqamweb'),
+                ['response' => 403]
+            );
+        }
+
+        check_admin_referer('ziada_check_theme_update');
+
+        $this->clear_update_caches();
+
+        if (function_exists('wp_update_themes')) {
+            wp_update_themes();
+        }
+
+        wp_safe_redirect(
+            add_query_arg(
+                'ziada_update_checked',
+                '1',
+                admin_url('themes.php?page=ziada-updates')
+            )
+        );
+        exit;
     }
 
     private function get_latest_release()
@@ -249,5 +362,38 @@ class MyTheme_GitHub_Updater
         }
 
         return 12 * HOUR_IN_SECONDS;
+    }
+
+    private function clear_update_caches()
+    {
+        delete_transient(self::RELEASE_TRANSIENT_KEY . $this->theme_slug);
+        delete_site_transient('update_themes');
+        wp_clean_themes_cache(true);
+    }
+
+    private function get_force_check_url()
+    {
+        return wp_nonce_url(
+            admin_url('admin-post.php?action=ziada_check_theme_update'),
+            'ziada_check_theme_update'
+        );
+    }
+
+    private function is_github_update_url($url)
+    {
+        if (!is_string($url)) {
+            return false;
+        }
+
+        $host = wp_parse_url($url, PHP_URL_HOST);
+        $path = wp_parse_url($url, PHP_URL_PATH);
+
+        if ($host !== 'api.github.com' || !is_string($path)) {
+            return false;
+        }
+
+        $repo_releases_path = '/repos/' . MYTHEME_GITHUB_USER . '/' . $this->github_repo . '/releases';
+
+        return strpos($path, $repo_releases_path) === 0;
     }
 }
